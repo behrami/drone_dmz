@@ -1,4 +1,10 @@
 <div class = "container text-center">
+  <% if flash[:danger] %>
+    <div class="alert alert-danger" role="alert">
+      <%= flash[:danger] %>
+    </div>
+  <% end %>
+
   <%= form_for @booking do |f| %>
   <h1 class="h3 mb-3 font-weight-normal">Request Form</h1>
     <%= label :acc_type, 'Customer' %>
@@ -19,4 +25,5 @@
 
     <%= f.submit "Submit Application", class: "btn btn-lg btn-primary btn-block" %>
   <% end %>
+
 </div>

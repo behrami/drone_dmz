@@ -1,4 +1,11 @@
 <div class = "container text-center">
+
+  <% if flash[:danger] %>
+    <div class="alert alert-danger" role="alert">
+      <%= flash[:danger] %>
+    </div>
+  <% end %>
+
   <%= form_for :session, url: session_path, html: {class: "form-signin"} do |f| %>
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 

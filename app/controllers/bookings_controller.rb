@@ -21,6 +21,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to booking_path(@booking.id)
     else
+      flash.now[:danger] = 'Please make sure you have filled the form correctly'
       render :new
     end
   end
