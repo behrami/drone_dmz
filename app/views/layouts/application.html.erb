@@ -28,7 +28,10 @@
         </li>
       <% if current_user %>
         <li class="nav-item">
-          <%= link_to 'Booking List', session_bookings_path, class: "nav-link" %>
+          <%= link_to 'Customer List', session_bookings_path(acc_type: 'Customer'), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Pilot List', session_bookings_path(acc_type: 'Pilot'), class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to 'Sign Out', session_path, method: :delete, class: "nav-link" %>

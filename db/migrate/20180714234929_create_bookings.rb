@@ -12,6 +12,7 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :street
       t.string :postal_code
+      t.string :acc_type
 
       t.timestamps
     end

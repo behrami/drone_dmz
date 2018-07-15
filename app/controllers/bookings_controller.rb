@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new
+    @booking.acc_type = params[:booking][:acc_type]
     @booking.first_name = params[:booking][:first_name]
     @booking.last_name = params[:booking][:last_name]
     @booking.email = params[:booking][:email]
@@ -25,7 +26,8 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.all
+    acc_type = params[:acc_type]
+    @bookings = Booking.where(acc_type: acc_type)
   end
 
   def destroy

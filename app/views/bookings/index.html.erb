@@ -1,7 +1,9 @@
 <div class = "container text-justify">
+
   <ul>
     <% @bookings.each do |booking| %>
       <li>
+        Account Type: <%= booking.acc_type %><br>
         First name: <%= booking.first_name %><br>
         Last name: <%= booking.last_name %><br>
         Email: <%= booking.email %><br>
@@ -17,4 +19,5 @@
       </li>
     <% end %>
   </ul>
+
 </div>
