@@ -2,7 +2,8 @@
   <ul>
     <% @bookings.each do |booking| %>
       <li>
-        <%= booking.first_name %> <%= booking.last_name %><br>
+        First name: <%= booking.first_name %><br>
+        Last name: <%= booking.last_name %><br>
         Email: <%= booking.email %><br>
         Phone: <%= booking.phone %><br>
         Expected Cost: <%= booking.cost %><br>
