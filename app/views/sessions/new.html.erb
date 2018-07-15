@@ -1,0 +1,13 @@
+<div class = "container text-center">
+  <%= form_for :session, url: session_path, html: {class: "form-signin"} do |f| %>
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <%= f.email_field :email, placeholder: "Email Address", class: "form-control", id: "inputEmail" %> <br>
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <%= f.password_field :password, placeholder: "Password", class: "form-control", id: "inputPassword" %> <br>
+
+    <%= f.submit "Sign In", class: "btn btn-lg btn-primary btn-block" %>
+  <% end %>
+</div>
