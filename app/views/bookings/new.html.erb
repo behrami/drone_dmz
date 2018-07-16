@@ -7,10 +7,8 @@
 
   <%= form_for @booking do |f| %>
   <h1 class="h3 mb-3 font-weight-normal">Request Form</h1>
-    <%= label :acc_type, 'Customer' %>
-    <%= f.radio_button :acc_type, 'Customer' %>
-    <%= label :acc_type, 'Pilot' %>
-    <%= f.radio_button :acc_type, 'Pilot' %>
+    <%= label :acc_type, 'Customer' %> <%= f.radio_button :acc_type, 'Customer' %>
+    <%= label :acc_type, 'Pilot' %> <%= f.radio_button :acc_type, 'Pilot' %>
     <%= f.text_field :first_name, placeholder: "First Name", class: "form-control"  %> <br>
     <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %> <br>
     <%= f.email_field :email, placeholder: "Email Address", class: "form-control" %> <br>
