@@ -18,13 +18,10 @@ body{
   background: linear-gradient(to bottom, #0099cc 0%, #00ffff 100%);
 }
 
-.content{
-	min-height: 120px;
-}
-
 #myFooter {
 	background-color: #373a48;
 	color:white;
+  margin-top: 20px;
 }
 
 #myFooter .footer-copyright{
