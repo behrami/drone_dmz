@@ -3,19 +3,49 @@
   <ul>
     <% @bookings.each do |booking| %>
       <li>
-        Account Type: <%= booking.acc_type %><br>
-        First name: <%= booking.first_name %><br>
-        Last name: <%= booking.last_name %><br>
-        Email: <%= booking.email %><br>
-        Phone: <%= booking.phone %><br>
-        Expected Cost: <%= booking.cost %><br>
-        Summary: <%= booking.summary %><br>
-        Street Address: <%= booking.street %><br>
-        City: <%= booking.city %><br>
-        Province: <%= booking.state %><br>
-        Country: <%= booking.country %><br>
-        Postal Code: <%= booking.postal_code %><br>
-        <%= link_to 'Delete', session_booking_path(booking), method: :delete %>
+        <dl class="row">
+          <dt class="col-sm-3">Account Type:</dt>
+          <dd class="col-sm-9"><%= booking.acc_type %></dd>
+
+          <dt class="col-sm-3">First name:</dt>
+          <dd class="col-sm-9"><%= booking.first_name %></dd>
+
+          <dt class="col-sm-3">Last name:</dt>
+          <dd class="col-sm-9"><%= booking.last_name %></dd>
+
+          <dt class="col-sm-3 text-truncate">Email:</dt>
+          <dd class="col-sm-9"><%= booking.email %></dd>
+
+          <dt class="col-sm-3 text-truncate">Phone:</dt>
+          <dd class="col-sm-9"><%= booking.phone %></dd>
+
+          <dt class="col-sm-3 text-truncate">Expected Cost:</dt>
+          <dd class="col-sm-9"><%= booking.email %></dd>
+
+          <dt class="col-sm-3 text-truncate">Email:</dt>
+          <dd class="col-sm-9"><%= booking.cost %></dd>
+
+          <dt class="col-sm-3 text-truncate">Summary:</dt>
+          <dd class="col-sm-9"><%= booking.summary %></dd>
+
+          <dt class="col-sm-3 text-truncate">Street Address:</dt>
+          <dd class="col-sm-9"><%= booking.street %></dd>
+
+          <dt class="col-sm-3 text-truncate">City:</dt>
+          <dd class="col-sm-9"><%= booking.city %></dd>
+
+          <dt class="col-sm-3 text-truncate">Province:</dt>
+          <dd class="col-sm-9"><%= booking.state %></dd>
+
+          <dt class="col-sm-3 text-truncate">Country:</dt>
+          <dd class="col-sm-9"><%= booking.country %></dd>
+
+          <dt class="col-sm-3 text-truncate">Postal Code:</dt>
+          <dd class="col-sm-9"><%= booking.postal_code %></dd>
+
+          <%= link_to 'Delete', session_booking_path(booking), class: "btn btn-danger", method: :delete %>
+
+        </dl>    
       </li>
     <% end %>
   </ul>
