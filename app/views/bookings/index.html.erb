@@ -20,9 +20,6 @@
           <dd class="col-sm-9"><%= booking.phone %></dd>
 
           <dt class="col-sm-3 text-truncate">Expected Cost:</dt>
-          <dd class="col-sm-9"><%= booking.email %></dd>
-
-          <dt class="col-sm-3 text-truncate">Email:</dt>
           <dd class="col-sm-9"><%= booking.cost %></dd>
 
           <dt class="col-sm-3 text-truncate">Summary:</dt>
@@ -45,7 +42,7 @@
 
           <%= link_to 'Delete', session_booking_path(booking), class: "btn btn-danger", method: :delete %>
 
-        </dl>    
+        </dl>
       </li>
     <% end %>
   </ul>
