@@ -20,62 +20,64 @@
 
   </head>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href= <%= root_path %> >
-      <img src="https://cdn1.iconfinder.com/data/icons/drone-5/123/DroneCamera-512.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      Dronez
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to 'Get Started', new_booking_path, class: "nav-link" %>
-        </li>
-      <% if current_user %>
-        <li class="nav-item">
-          <%= link_to 'Patron List', session_bookings_path(acc_type: 'Patron'), class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Pilot List', session_bookings_path(acc_type: 'Pilot'), class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Sign Out', session_path, method: :delete, class: "nav-link" %>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to 'Sign In', new_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
-    </div>
-  </nav>
-
   <body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href= <%= root_path %> >
+        <img src="https://cdn1.iconfinder.com/data/icons/drone-5/123/DroneCamera-512.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Dronez
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <%= link_to 'Get Started', new_booking_path, class: "nav-link" %>
+          </li>
+        <% if current_user %>
+          <li class="nav-item">
+            <%= link_to 'Patron List', session_bookings_path(acc_type: 'Patron'), class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Pilot List', session_bookings_path(acc_type: 'Pilot'), class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Sign Out', session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to 'Sign In', new_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+      </div>
+    </nav>
 
     <%= yield %>
 
+    <!-- Footer -->
+    <footer id="myFooter">
+        <div class="social-networks">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></a>
+            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2018 Copyright:
+              <a href="https://www.linkedin.com/in/behram-i-936b823b">Behram Irani</a>,
+              <a href="">Yawar Abbas</a>,
+              <a href="">Hafeez Khan</a>,
+              <a href="">Winston Kingston</a> </p>
+        </div>
+    </footer>
+
   </body>
 
-  <!-- Footer -->
-  <footer id="myFooter">
-      <div class="social-networks">
-          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></a>
-          <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
-          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-      </div>
-      <div class="footer-copyright">
-          <p>© 2018 Copyright:
-            <a href="https://www.linkedin.com/in/behram-i-936b823b">Behram Irani</a>,
-            <a href="">Yawar Abbas</a>,
-            <a href="">Hafeez Khan</a>,
-            <a href="">Winston Kingston</a> </p>
-      </div>
-  </footer>
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
