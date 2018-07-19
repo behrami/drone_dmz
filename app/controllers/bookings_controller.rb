@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
     @booking.postal_code = params[:booking][:postal_code]
 
     if @booking.save
+      FormSubmitMailer.notify_form_submit(@booking).deliver
       redirect_to booking_path(@booking.id)
     else
       flash.now[:danger] = 'Please make sure you have filled the form correctly'
