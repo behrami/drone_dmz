@@ -19,7 +19,6 @@ class PatronsController < ApplicationController
 
     if @patron.save
       FormSubmitMailer.notify_form_submit_patron(@patron).deliver
-      # redirect_to patron_path(@patron.id)
       redirect_to root_path(@patron.id)
     else
       flash.now[:danger] = 'Please make sure you have filled the form correctly'

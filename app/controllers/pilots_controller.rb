@@ -18,10 +18,8 @@ class PilotsController < ApplicationController
     @pilot.street = params[:pilot][:street]
     @pilot.postal_code = params[:pilot][:postal_code]
 
-
     if @pilot.save
       FormSubmitMailer.notify_form_submit_pilot(@pilot).deliver
-      # redirect_to pilot_path(@pilot.id)
       redirect_to root_path(@pilot.id)
     else
       flash.now[:danger] = 'Please make sure you have filled the form correctly'
