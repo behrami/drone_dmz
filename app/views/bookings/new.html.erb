@@ -21,6 +21,13 @@
     <%= f.text_field :street, placeholder: "Street Address", class: "form-control"  %> <br>
     <%= f.text_field :postal_code, placeholder: "Postal code", class: "form-control"  %> <br>
 
+    <%= label :available_days, 'Available Days:' %>
+    <% days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] %>
+    <% days.each do |day| %>
+      <%= label :available_days, day %>
+      <%= f.check_box :available_days, { multiple: true }, day, false %><br>
+    <% end %>
+
     <%= f.submit "Submit Application", class: "btn btn-primary" %>
   <% end %>
 

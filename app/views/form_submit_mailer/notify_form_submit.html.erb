@@ -1,3 +1,6 @@
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
 <dl class="row">
 
   <dt class="col-sm-3">Account Type:</dt>
@@ -35,5 +38,8 @@
 
   <dt class="col-sm-3 text-truncate">Postal Code:</dt>
   <dd class="col-sm-9"><%= @user.postal_code %></dd>
+
+  <dt class="col-sm-3 text-truncate">Available Days:</dt>
+  <dd class="col-sm-9"><%= booking.available_days %></dd>
 
 </dl>

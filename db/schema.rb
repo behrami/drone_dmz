@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_07_15_002344) do
     t.string "street"
     t.string "postal_code"
     t.string "acc_type"
+    t.string "available_days"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

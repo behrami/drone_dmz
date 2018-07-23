@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
     @booking.city = params[:booking][:city].capitalize
     @booking.street = params[:booking][:street]
     @booking.postal_code = params[:booking][:postal_code]
+    @booking.available_days = params[:booking][:available_days]
 
     if @booking.save
       FormSubmitMailer.notify_form_submit(@booking).deliver
