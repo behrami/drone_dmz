@@ -1,5 +1,17 @@
 <div class = 'container'>
 
+  <% if @patron %>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading"><%= @patron.first_name %>!</h4>
+      <p>You have successfully submitted the form and we have recieved your order. Our team will process it and contact you as soon as possibile.</p>
+    </div>
+  <% elsif @pilot %>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading"><%= @pilot.first_name %>!</h4>
+      <p>You have successfully submitted the form and we have recieved your application to become a drone pilot. Our team will contact you as soon as possibile.</p>
+    </div>
+  <% end %>
+
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="card">

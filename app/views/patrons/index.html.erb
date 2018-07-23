@@ -1,0 +1,48 @@
+<div class = "container text-justify">
+
+  <ul>
+    <% @patrons.each do |patron| %>
+      <li>
+        <dl class="row">
+
+          <dt class="col-sm-3">First name:</dt>
+          <dd class="col-sm-9"><%= patron.first_name %></dd>
+
+          <dt class="col-sm-3">Last name:</dt>
+          <dd class="col-sm-9"><%= patron.last_name %></dd>
+
+          <dt class="col-sm-3 text-truncate">Email:</dt>
+          <dd class="col-sm-9"><%= patron.email %></dd>
+
+          <dt class="col-sm-3 text-truncate">Phone:</dt>
+          <dd class="col-sm-9"><%= patron.phone %></dd>
+
+          <dt class="col-sm-3 text-truncate">Expected Cost:</dt>
+          <dd class="col-sm-9"><%= patron.cost %></dd>
+
+          <dt class="col-sm-3 text-truncate">Summary:</dt>
+          <dd class="col-sm-9"><%= patron.summary %></dd>
+
+          <dt class="col-sm-3 text-truncate">Street Address:</dt>
+          <dd class="col-sm-9"><%= patron.street %></dd>
+
+          <dt class="col-sm-3 text-truncate">City:</dt>
+          <dd class="col-sm-9"><%= patron.city %></dd>
+
+          <dt class="col-sm-3 text-truncate">Province:</dt>
+          <dd class="col-sm-9"><%= patron.state %></dd>
+
+          <dt class="col-sm-3 text-truncate">Country:</dt>
+          <dd class="col-sm-9"><%= patron.country %></dd>
+
+          <dt class="col-sm-3 text-truncate">Postal Code:</dt>
+          <dd class="col-sm-9"><%= patron.postal_code %></dd>
+
+          <%= link_to 'Delete', session_patron_path(patron), class: "btn btn-danger", method: :delete %>
+
+        </dl>
+      </li>
+    <% end %>
+  </ul>
+
+</div>
