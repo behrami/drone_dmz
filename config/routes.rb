@@ -8,5 +8,11 @@ Rails.application.routes.draw do
   resource :session, only: %i[new create destroy] do
     resources :patrons, only:  %i[index destroy]
     resources :pilots, only:  %i[index destroy]
+    resources :bookings, only:  %i[index destroy]
+    resources :patrons, only:  %i[index] do
+      resources :pilots, only:  %i[index] do
+        resources :bookings, only:  %i[new create]
+      end
+    end
   end
 end
