@@ -1,17 +1,5 @@
 <div class = 'container'>
 
-  <% if @patron %>
-    <div class="alert alert-success" role="alert">
-      <h4 class="alert-heading"><%= @patron.first_name %>!</h4>
-      <p>You have successfully submitted the form and we have recieved your order. Our team will process it and contact you as soon as possibile.</p>
-    </div>
-  <% elsif @pilot %>
-    <div class="alert alert-success" role="alert">
-      <h4 class="alert-heading"><%= @pilot.first_name %>!</h4>
-      <p>You have successfully submitted the form and we have recieved your application to become a drone pilot. Our team will contact you as soon as possibile.</p>
-    </div>
-  <% end %>
-
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="card">
@@ -42,6 +30,18 @@
 
   <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
   <div id="main">
+    <% if @patron %>
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading"><%= @patron.first_name %>!</h4>
+        <p>You have successfully submitted the form and we have recieved your order. Our team will process it and contact you as soon as possibile.</p>
+      </div>
+    <% elsif @pilot %>
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading"><%= @pilot.first_name %>!</h4>
+        <p>You have successfully submitted the form and we have recieved your application to become a drone pilot. Our team will contact you as soon as possibile.</p>
+      </div>
+    <% end %>
+
     <h1 class="cover-heading">Welcome</h1>
     <p class="lead">DroneTensor is a network of certified drone pilots matched to people with commercial, and personal drone needs. Idle drone pilots can turn their passion into a regular revenue stream in new gig economy.</p>
     <p class="lead">

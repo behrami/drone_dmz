@@ -45,6 +45,12 @@
             <%= link_to 'Pilot List', session_pilots_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
+            <%= link_to 'Booking List', session_bookings_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Create Booking', new_session_booking_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
             <%= link_to 'Sign Out', session_path, method: :delete, class: "nav-link" %>
           </li>
         <% else %>

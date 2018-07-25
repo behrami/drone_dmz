@@ -20,7 +20,7 @@ class PilotsController < ApplicationController
 
     if @pilot.save
       FormSubmitMailer.notify_form_submit_pilot(@pilot).deliver
-      redirect_to root_path(@pilot.id)
+      redirect_to root_path(id: @pilot.id, accType: 'Pilot')
     else
       flash.now[:danger] = 'Please make sure you have filled the form correctly'
       render :new

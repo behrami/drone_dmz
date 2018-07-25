@@ -1,5 +1,5 @@
 class Patron < ApplicationRecord
-  # validatoins
+  # validations
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, uniqueness: true, presence: true
@@ -13,5 +13,5 @@ class Patron < ApplicationRecord
 
   # relations
   has_many :bookings
-  has_many :pilots, through :bookings
+  has_many :pilots, through: :bookings
 end

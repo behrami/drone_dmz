@@ -14,5 +14,5 @@ class Pilot < ApplicationRecord
 
   # relations
   has_many :bookings
-  has_many :patrons, through :bookings
+  has_many :patrons, through: :bookings
 end
