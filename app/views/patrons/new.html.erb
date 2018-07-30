@@ -6,19 +6,50 @@
     </div>
   <% end %>
 
-  <%= form_for @patron do |f| %>
   <h1 class="h3 mb-3 font-weight-normal">Request Form for Patron</h1>
-    <%= f.text_field :first_name, placeholder: "First Name", class: "form-control"  %> <br>
-    <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %> <br>
-    <%= f.email_field :email, placeholder: "Email Address", class: "form-control" %> <br>
-    <%= f.telephone_field :phone, placeholder: "Phone Number", class: "form-control" %> <br>
-    <%= f.number_field :cost, placeholder: "Pref Cost in Dollars", in: 1..99999, class: "form-control" %> <br>
-    <%= f.text_area :summary, placeholder: "Additional Info", class: "form-control" %> <br>
-    <%= f.text_field :country, placeholder: "Country", class: "form-control"  %> <br>
-    <%= f.text_field :state, placeholder: "State", class: "form-control"  %> <br>
-    <%= f.text_field :city, placeholder: "City", class: "form-control"  %> <br>
-    <%= f.text_field :street, placeholder: "Street Address", class: "form-control"  %> <br>
-    <%= f.text_field :postal_code, placeholder: "Postal code", class: "form-control"  %> <br>
+  <%= form_for @patron do |f| %>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.text_field :first_name, placeholder: "First Name", class: "form-control"  %> <br>
+      </div>
+      <div class="form-group col-md-6">
+        <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %> <br>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.email_field :email, placeholder: "Email Address", class: "form-control" %> <br>
+      </div>
+      <div class="form-group col-md-6">
+        <%= f.telephone_field :phone, placeholder: "Phone Number. No spaces", class: "form-control" %> <br>
+      </div>
+    </div>
+
+    <%= f.number_field :cost, placeholder: "Budget in Dollars", in: 1..99999, class: "form-control" %> <br> <br>
+    <%= f.text_area :summary, placeholder: "Additional Info", class: "form-control" %> <br> <br>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.text_field :country, placeholder: "Country", class: "form-control"  %> <br>
+      </div>
+      <div class="form-group col-md-3">
+        <%= f.text_field :state, placeholder: "State", class: "form-control"  %> <br>
+      </div>
+      <div class="form-group col-md-3">
+        <%= f.text_field :city, placeholder: "City", class: "form-control"  %> <br>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <%= f.text_field :street, placeholder: "Street Address", class: "form-control"  %> <br>
+      </div>
+      <div class="form-group col-md-4">
+        <%= f.text_field :postal_code, placeholder: "Postal code", class: "form-control"  %> <br>
+      </div>
+    </div>
 
     <%= f.submit "Submit Application", class: "btn btn-primary" %>
   <% end %>

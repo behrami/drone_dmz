@@ -19,7 +19,7 @@ html{
 }
 
 body{
-  background: linear-gradient(to bottom, #0099cc 0%, #00ffff 100%);
+  /* background: linear-gradient(to bottom, #0099cc 0%, #00ffff 100%); */
 }
 
 #myFooter {
@@ -90,4 +90,3 @@ body{
 	#myFooter {
 		text-align: center;
 	}
-}
