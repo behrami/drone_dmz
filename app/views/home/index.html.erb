@@ -1,3 +1,16 @@
+<!-- form submission success message -->
+<% if @patron %>
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading"><%= @patron.first_name %>!</h4>
+    <p>You have successfully submitted the form and we have recieved your order. Our team will process it and contact you as soon as possibile.</p>
+  </div>
+<% elsif @pilot %>
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading"><%= @pilot.first_name %>!</h4>
+    <p>You have successfully submitted the form and we have recieved your application to become a drone pilot. Our team will contact you as soon as possibile.</p>
+  </div>
+<% end %>
+
 <!-- pictures -->
 <div id="carouselHomeIndicators" class="carousel slide cid-qZ6ONvWm7W" data-ride="carousel">
 
@@ -46,19 +59,6 @@
 </div>
 
 <div class = 'container'>
-
-    <!-- form submission success message -->
-    <% if @patron %>
-      <div class="alert alert-success" role="alert">
-        <h4 class="alert-heading"><%= @patron.first_name %>!</h4>
-        <p>You have successfully submitted the form and we have recieved your order. Our team will process it and contact you as soon as possibile.</p>
-      </div>
-    <% elsif @pilot %>
-      <div class="alert alert-success" role="alert">
-        <h4 class="alert-heading"><%= @pilot.first_name %>!</h4>
-        <p>You have successfully submitted the form and we have recieved your application to become a drone pilot. Our team will contact you as soon as possibile.</p>
-      </div>
-    <% end %>
 
     <br>
     <!-- pilot or patron selection -->
