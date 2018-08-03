@@ -5,6 +5,9 @@ class CreatePilots < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :email
       t.string :phone
+      t.string :driver_license
+      t.string :drone_number
+      t.string :phone
       t.float :cost
       t.string :available_days
       t.text :summary

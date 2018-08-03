@@ -27,6 +27,15 @@
       </div>
     </div>
 
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.text_field :driver_license, placeholder: "Driver License", class: "form-control" %> <br>
+      </div>
+      <div class="form-group col-md-6">
+        <%= f.text_field :drone_number, placeholder: "Drone Number", class: "form-control" %> <br>
+      </div>
+    </div>
+
     <%= f.number_field :cost, placeholder: "Hourly Rate in Dollars", in: 1..999, class: "form-control" %> <br> <br>
     <%= f.text_area :summary, placeholder: "Additional Info", class: "form-control" %> <br> <br>
 

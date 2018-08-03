@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 2018_07_24_024259) do
     t.string "last_name"
     t.string "email"
     t.string "phone"
+    t.string "driver_license"
+    t.string "drone_number"
     t.float "cost"
     t.string "available_days"
     t.text "summary"

@@ -9,6 +9,8 @@ class PilotsController < ApplicationController
     @pilot.last_name = params[:pilot][:last_name].capitalize
     @pilot.email = params[:pilot][:email]
     @pilot.phone = params[:pilot][:phone]
+    @pilot.driver_license = params[:pilot][:driver_license]
+    @pilot.drone_number = params[:pilot][:drone_number]
     @pilot.cost = params[:pilot][:cost]
     @pilot.available_days = params[:pilot][:available_days]
     @pilot.summary = params[:pilot][:summary]
